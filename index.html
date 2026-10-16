@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Task Manager</title>
+    <meta
+      name="description"
+      content="A task manager built with vanilla JavaScript and a REST API."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <h1>My Task Manager</h1>
+      <p class="subtitle">Organize your day, one task at a time.</p>
+
+      <form id="task-form">
+        <label for="task-input">New task</label>
+        <div class="form-row">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Enter a new task..."
+            required
+          />
+          <button type="submit">Add Task</button>
+        </div>
+      </form>
+
+      <section class="search-section">
+        <label for="search-input">Search tasks</label>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search by task title..."
+        />
+      </section>
+
+      <p id="status-message" role="status" aria-live="polite">
+        Loading tasks...
+      </p>
+
+      <ul id="task-list" aria-label="Task list"></ul>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
