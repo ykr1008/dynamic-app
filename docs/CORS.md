@@ -1,0 +1,5 @@
+# Explain CORS to a back-end developer who thinks it is a front-end bug.
+
+Cross-Origin Resource Sharing (CORS) is a browser security mechanism that controls whether JavaScript running on one origin can access responses from another origin. An origin consists of the scheme, hostname, and port. For example, an application running at `http://127.0.0.1:5500` requesting `https://example.com/` makes a cross-origin request. The browser checks the server's response for appropriate CORS headers, such as `Access-Control-Allow-Origin`. If the required permission is missing, the browser prevents JavaScript from accessing the response, even if the server returns HTTP 200 (OK).
+
+CORS is enforced by the browser, but the server usually controls permission through its response headers. Therefore, a CORS error is not necessarily a frontend coding bug or an API availability problem. Opening the same URL directly in a browser tab can succeed because direct navigation does not require the same CORS permission. The backend developer must configure appropriate CORS headers for authorized origins.

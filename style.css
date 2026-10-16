@@ -137,3 +137,18 @@ button:hover {
   white-space: nowrap;
   min-width: 120px;
 }
+
+
+.task-action {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}

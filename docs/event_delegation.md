@@ -1,0 +1,5 @@
+# What is event delegation and why use it?
+
+Event delegation is a JavaScript technique in which a single event listener is attached to a parent element instead of attaching separate listeners to every child element. It works because of event bubbling: when an event occurs on a child, it travels upward through its ancestors. The parent listener can identify which child triggered the event using properties such as `event.target` and methods such as `closest()`.
+
+In my task manager, I attached one click listener to the task list to handle editing, deleting, and toggling task completion. Each task action has a `data-action` attribute that identifies its purpose. This approach is especially useful because tasks are created dynamically after the page loads. Newly added tasks automatically work with the existing listener without requiring additional event listeners. Event delegation reduces repetitive code, simplifies event management, and can improve efficiency when handling many interactive elements.
